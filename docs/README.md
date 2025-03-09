@@ -2,7 +2,8 @@
 # GAN-Based Synthetic Data Generation for Energy Applications
 
 This repository contains implementations of **GAN, cGAN, and WGAN** for generating synthetic datasets 
-for **nuclear reactor control systems and power grid forecasting**.
+for critical heat flux (CHF) and
+ power grid demand forecasting.
 
 ## Research Paper
 The associated research paper can be found [here](docs/Nabila_GAN_Paper.pdf).
