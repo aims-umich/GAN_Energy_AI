@@ -6,7 +6,7 @@ for critical heat flux (CHF) and
  power grid demand forecasting.
 
 ## Research Paper
-The associated research paper can be found [here](docs/Nabila_GAN_Paper.pdf).
+The associated research paper can be found [here](Nabila_GAN_Paper.pdf).
 
 ## Repository Structure
 - `models/` - Contains different GAN architectures (`cGAN`, `WGAN`, etc.).
