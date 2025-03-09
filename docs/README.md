@@ -11,7 +11,6 @@ The associated research paper can be found [here](docs/Nabila_GAN_Paper.pdf).
 - `models/` - Contains different GAN architectures (`cGAN`, `WGAN`, etc.).
 - `data/` - Stores training and testing datasets.
 - `results/` - Generated results and loss plots.
-- `notebooks/` - Jupyter Notebooks for experimentation.
 - `docs/` - Research paper and documentation.
 
 ## Dependencies
