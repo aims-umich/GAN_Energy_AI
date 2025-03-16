@@ -9,6 +9,7 @@ Nabila, U.M., Lin, L., Zhao, X., Gurecky, W.L., Ramuhalli, P., Radaideh, M.I. (2
 ## ⚙️Environment Installation
 
 This project uses PyTorch for most models (WGAN, FNN, GRU, etc.) and TensorFlow for the cGAN model. Please set up the environments accordingly:
+
 🔵 PyTorch Environment (for WGAN, FNN, GRU, etc.)
 ```bash
 # 1. Create a new conda environment with Python 3.11
