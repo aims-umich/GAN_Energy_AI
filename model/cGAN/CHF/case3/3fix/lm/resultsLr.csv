@@ -1,0 +1,2 @@
+learning_rate,num_layers,num_nodes,batch_size,MAPE,MSE,R2
+0.0005,3,300,128,92.96823406357417,2933512.628779221,-0.4702070318998275
