@@ -1,0 +1,34 @@
+R-squared (R): 0.4354
+Trial 0: MAPE = 57.9281
+R-squared (R): 0.4171
+Trial 1: MAPE = 55.0156
+R-squared (R): 0.9347
+Trial 2: MAPE = 14.5561
+R-squared (R): 0.5782
+Trial 3: MAPE = 48.7580
+R-squared (R): 0.5651
+Trial 4: MAPE = 44.1972
+R-squared (R): -0.0193
+Trial 5: MAPE = 116.7307
+R-squared (R): -1.6931
+Trial 6: MAPE = 106.4932
+R-squared (R): 0.3539
+Trial 7: MAPE = 70.9056
+R-squared (R): -0.0570
+Trial 8: MAPE = 94.5839
+R-squared (R): -211816.8123
+Trial 9: MAPE = 63978.0478
+R-squared (R): 0.6765
+Trial 10: MAPE = 49.7954
+R-squared (R): 0.7081
+Trial 11: MAPE = 29.5628
+R-squared (R): 0.7032
+Trial 12: MAPE = 32.8040
+R-squared (R): 0.4496
+Trial 13: MAPE = 40.1588
+R-squared (R): -786778179231532493832192.0000
+Trial 14: MAPE = 122214648948258.7344
+R-squared (R): 0.7393
+Trial 15: MAPE = 26.9446
+R-squared (R): 0.2973
+Trial 16: MAPE = 84.3777

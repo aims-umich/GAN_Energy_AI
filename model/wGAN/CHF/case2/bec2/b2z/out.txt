@@ -1,0 +1,104 @@
+R-squared (R): -1.0160
+Trial 0: MAPE = 155.2552
+R-squared (R): 0.0849
+Trial 1: MAPE = 95.4764
+R-squared (R): -1.3111
+Trial 2: MAPE = 202.8584
+R-squared (R): -0.0599
+Trial 3: MAPE = 137.4410
+R-squared (R): -0.0086
+Trial 4: MAPE = 117.4228
+R-squared (R): -1.8668
+Trial 5: MAPE = 165.5145
+R-squared (R): 0.4608
+Trial 6: MAPE = 100.3477
+R-squared (R): -88.1296
+Trial 7: MAPE = 1420.9062
+R-squared (R): -16248437063029169848320.0000
+Trial 8: MAPE = 20194087376664.1523
+R-squared (R): -0.0093
+Trial 9: MAPE = 110.6179
+R-squared (R): -0.7661
+Trial 10: MAPE = 145.9977
+R-squared (R): 0.2361
+Trial 11: MAPE = 119.2484
+R-squared (R): -0.7232
+Trial 12: MAPE = 141.8472
+R-squared (R): -1.3620
+Trial 13: MAPE = 125.4661
+R-squared (R): -0.2436
+Trial 14: MAPE = 172.1507
+R-squared (R): -2.2584
+Trial 15: MAPE = 171.8309
+R-squared (R): -0.0731
+Trial 16: MAPE = 140.9126
+R-squared (R): -0.1098
+Trial 17: MAPE = 103.5212
+R-squared (R): -0.9014
+Trial 18: MAPE = 167.4184
+R-squared (R): -29272574699.7448
+Trial 19: MAPE = 28356485.9642
+R-squared (R): -0.1104
+Trial 20: MAPE = 87.3021
+R-squared (R): 0.1396
+Trial 21: MAPE = 75.0073
+R-squared (R): -1.6051
+Trial 22: MAPE = 156.3816
+R-squared (R): 0.0168
+Trial 23: MAPE = 94.7289
+R-squared (R): -0.0780
+Trial 24: MAPE = 135.9153
+R-squared (R): -0.3450
+Trial 25: MAPE = 115.2433
+R-squared (R): -0.9205
+Trial 26: MAPE = 153.7882
+R-squared (R): -0.0147
+Trial 27: MAPE = 115.8562
+R-squared (R): -0.9330
+Trial 28: MAPE = 155.2885
+R-squared (R): -1.2616
+Trial 29: MAPE = 145.2899
+R-squared (R): -0.7529
+Trial 30: MAPE = 127.5045
+R-squared (R): 0.2692
+Trial 31: MAPE = 78.2464
+R-squared (R): -1.3554
+Trial 32: MAPE = 157.8916
+R-squared (R): 0.1745
+Trial 33: MAPE = 90.9866
+R-squared (R): 0.5476
+Trial 34: MAPE = 57.5769
+R-squared (R): 0.1908
+Trial 35: MAPE = 103.0952
+R-squared (R): -2.1164
+Trial 36: MAPE = 160.7482
+R-squared (R): 0.2026
+Trial 37: MAPE = 81.5492
+R-squared (R): 0.3785
+Trial 38: MAPE = 87.6931
+R-squared (R): -0.6279
+Trial 39: MAPE = 132.4820
+R-squared (R): 0.4309
+Trial 40: MAPE = 73.4174
+R-squared (R): 0.4180
+Trial 41: MAPE = 84.5983
+R-squared (R): 0.6441
+Trial 42: MAPE = 62.0391
+R-squared (R): 0.5446
+Trial 43: MAPE = 100.3206
+R-squared (R): -202249163136381168386048.0000
+Trial 44: MAPE = 75966161162346.7344
+R-squared (R): 0.6909
+Trial 45: MAPE = 39.1581
+R-squared (R): -0.0936
+Trial 46: MAPE = 145.7812
+R-squared (R): -666559623166753872281600.0000
+Trial 47: MAPE = 139083396623478.6875
+R-squared (R): -14.8054
+Trial 48: MAPE = 695.0357
+R-squared (R): -6625275618745135675399445938176.0000
+Trial 49: MAPE = 437035205961363968.0000
+Best trial number: 45
+Best hyperparameters: {'latent_dim': 26, 'lr_vae': 0.00012843069248775577, 'lr_gan': 0.004518873419661013, 'num_epochs_vae': 408, 'num_epochs_gan': 4300, 'num_layers': 6, 'num_nodes': 239}
+Best b2z MAPE: 39.15813827006483
+Total time elapsed: 173.45 minutes
