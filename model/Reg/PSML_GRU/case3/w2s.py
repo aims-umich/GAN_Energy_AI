@@ -43,7 +43,7 @@ class GRUmodel(nn.Module):
         return x
 
 # Load data
-data = pd.read_csv("/home/unabila/wgan/CAISO_zone_1_.csv", index_col='time')
+data = pd.read_csv("../../../../data/CAISO_zone_1_.csv", index_col='time')
 
 
 # Move "wind power", "solar power", "load power" to the end of the DataFrame
