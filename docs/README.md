@@ -36,3 +36,11 @@ pip install tensorflow[cuda]
 # 4. Install other relevant packages
 pip install pandas matplotlib scikit-learn seaborn
 ```
+
+## 📂 Dataset Access
+
+Due to GitHub's file size limit, the dataset `CAISO_zone_1_.csv` (187 MB) is hosted externally.
+
+👉 [Download CAISO_zone_1_.csv from this link](https://drive.google.com/file/d/1coOdL7Lq1hBkMSt8t9sRT3f5M7pPv7Jb/view?usp=sharing)
+
+After downloading, place the file in the `data/` folder of this repository.
