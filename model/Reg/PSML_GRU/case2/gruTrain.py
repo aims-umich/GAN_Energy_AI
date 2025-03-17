@@ -43,7 +43,7 @@ class GRUmodel(nn.Module):
         return x
 
 # Load data
-data = pd.read_csv("/home/unabila/wgan/CAISO_zone_1_.csv", index_col='time')
+data = pd.read_csv("../../../../data/CAISO_zone_1_.csv", index_col='time')
 
 # Move "wind power", "solar power", "load power" to the end of the DataFrame
 target_columns = ['wind_power', 'solar_power', 'load_power']
@@ -171,7 +171,7 @@ for i, train_size in enumerate(cases):
 
 # Convert results to DataFrame and save to CSV
 results_df = pd.DataFrame(results)
-results_df.to_csv('gru_train_size_12h_results.csv', index=False)
+results_df.to_csv('gru_train_size_results.csv', index=False)
 
 # Print the elapsed time
 end_time = time.time()
