@@ -161,14 +161,14 @@ gridres = pd.DataFrame(columns=['run', 'learning_rate', 'num_layers', 'num_nodes
 # Assuming x_train are your features and y_train are the labels you want to generate.
 # Load real_data and input_data from CSV files
 # Read train data
-train_data = pd.read_csv("/home/unabila/CondGan/ex5/train_ex5.csv").values
+train_data = pd.read_csv("train_ex5.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 xtrain = train_data[:, :-1]
 ytrain = train_data[:, -1]
 
 # Read test data
-test_data = pd.read_csv("/home/unabila/CondGan/ex5/test_ex5.csv").values
+test_data = pd.read_csv("test_ex5.csv").values
 Ytest = test_data[:, -1]
 test_data = scaler.transform(test_data)  # Use the same scaler as for train data
 xtest = test_data[:, :-1]

@@ -49,7 +49,7 @@ def build_discriminator(x_dim,learning_rate, num_layers, num_nodes):
 
     model = Model(inputs=x, outputs=out_layer)
 
-    model.compile(loss='binary_crossentropy', optimizer=Adam(lr=learning_rate), metrics=['mean_absolute_error'])
+    model.compile(loss='binary_crossentropy', optimizer=Adam(learning_rate=learning_rate), metrics=['mean_absolute_error'])
     return model
 
 
@@ -161,14 +161,14 @@ gridres = pd.DataFrame(columns=['run', 'learning_rate', 'num_layers', 'num_nodes
 # Assuming x_train are your features and y_train are the labels you want to generate.
 # Load real_data and input_data from CSV files
 # Read train data
-train_data = pd.read_csv("/home/unabila/CondGan/sml2/Smolin.csv").values
+train_data = pd.read_csv("../Smolin.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 xtrain = train_data[:, :-1]
 ytrain = train_data[:, -1]
 
 # Read test data
-test_data = pd.read_csv("/home/unabila/CondGan/sml2/Kirillov.csv").values
+test_data = pd.read_csv("../Kirillov.csv").values
 Ytest = test_data[:, -1]
 test_data = scaler.transform(test_data)  # Use the same scaler as for train data
 xtest = test_data[:, :-1]

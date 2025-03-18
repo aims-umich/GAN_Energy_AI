@@ -43,7 +43,7 @@ def build_discriminator(x_dim,learning_rate, num_layers, num_nodes):
 
     model = Model(inputs=x, outputs=out_layer)
 
-    model.compile(loss='binary_crossentropy', optimizer=Adam(lr=learning_rate), metrics=['mean_absolute_error'])
+    model.compile(loss='binary_crossentropy', optimizer=Adam(learning_rate=learning_rate), metrics=['mean_absolute_error'])
     return model
 
 
@@ -187,14 +187,14 @@ gridres = pd.DataFrame(columns=['run', 'learning_rate', 'num_layers', 'num_nodes
 
 # Load real_data and input_data from CSV files
 # Read train data
-train_data = pd.read_csv("/home/unabila/CondGan/all/train_all.csv").values
+train_data = pd.read_csv("train_all.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 xtrain = train_data[:, :-1]
 ytrain = train_data[:, -1]
 
 # Read test data
-test_data = pd.read_csv("/home/unabila/CondGan/all/test_all.csv").values
+test_data = pd.read_csv("test_all.csv").values
 Ytest = test_data[:, -1]
 test_data = scaler.transform(test_data)  # Use the same scaler as for train data
 xtest = test_data[:, :-1]
@@ -258,7 +258,7 @@ results_df = pd.DataFrame(MS_list, columns=['MAPE', 'R2'])
 final_result = pd.concat([gridres, results_df], axis=1)
 
 # Save the results to a CSV file
-final_result.to_csv('resultsLR.csv', index=False)
+final_result.to_csv('results.csv', index=False)
 
 # Assign mean and sigma values to separate columns in the DataFrame
 gridres['Mape'] = mean_values

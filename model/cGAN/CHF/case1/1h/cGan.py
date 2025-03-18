@@ -38,7 +38,7 @@ def build_discriminator(x_dim, learning_rate, num_layers, num_nodes):
     out_layer = Dense(1)(hidden)
 
     model = Model(inputs=x, outputs=out_layer)
-    model.compile(loss=wasserstein_loss, optimizer=RMSprop(lr=learning_rate))
+    model.compile(loss=wasserstein_loss, optimizer=RMSprop(learning_rate=learning_rate))
     return model
 
 def wasserstein_loss(y_true, y_pred):
@@ -127,13 +127,13 @@ MS_list = []
 # Create an empty DataFrame to store results
 gridres = pd.DataFrame(columns=['run', 'learning_rate', 'num_layers', 'num_nodes', 'Mape', 'R2'])
 
-train_data = pd.read_csv("/home/unabila/WganCHF/1h/train_1h.csv").values
+train_data = pd.read_csv("train_1h.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 xtrain = train_data[:, :-1]
 ytrain = train_data[:, -1]
 
-test_data = pd.read_csv("/home/unabila/WganCHF/1h/test_all.csv").values
+test_data = pd.read_csv("test_all.csv").values
 Ytest = test_data[:, -1]
 test_data = scaler.transform(test_data)
 xtest = test_data[:, :-1]
