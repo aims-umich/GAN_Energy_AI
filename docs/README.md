@@ -44,3 +44,14 @@ Due to GitHub's file size limit, the dataset `CAISO_zone_1_.csv` (187 MB) is hos
 👉 [Download CAISO_zone_1_.csv from this link] (https://drive.google.com/file/d/1coOdL7Lq1hBkMSt8t9sRT3f5M7pPv7Jb/view?usp=sharing)
 
 After downloading, place the file in the `data/` folder of this repository.
+
+## 📊 How to generate the results
+
+- The folder `data` contains the train and test data files (with all the data points) used by the model scripts to generate results. Datasets for different case scenarios are organized into appropriate case-specific folders under the model directory.
+-  Navigate to the desired case folder inside models and run the appropriate script to start training or evaluation (e.g., cGan_all.py for case1/all):
+  
+```bash
+python cGan_all.py
+```
+
+Results will be saved automatically in the working folder.
