@@ -267,10 +267,9 @@ for i, train_size in enumerate(cases):
         MSE = mean_squared_error(y_test_true[:, i], y_test_pred[:, i])
         RMSE = math.sqrt(MSE)
         MAE = mean_absolute_error(y_test_true[:, i], y_test_pred[:, i])
-        R2 = r2_score(y_test_true[:, i], y_test_pred[:, i])
 
         # Store results in dictionary
-        metrics[param] = {'RMSE': RMSE, 'MAE': MAE, 'R2': R2}
+        metrics[param] = {'RMSE': RMSE, 'MAE': MAE}
 
         # Plot predictions
         plt.figure(figsize=(12, 8))
@@ -287,13 +286,11 @@ for i, train_size in enumerate(cases):
         'train_size': train_size,
         'RMSE_wind': metrics["wind power"]['RMSE'],
         'MAE_wind': metrics["wind power"]['MAE'],
-        'R2_wind': metrics["wind power"]['R2'],
         'RMSE_solar': metrics["solar power"]['RMSE'],
         'MAE_solar': metrics["solar power"]['MAE'],
-        'R2_solar': metrics["solar power"]['R2'],
         'RMSE_load': metrics["load power"]['RMSE'],
-        'MAE_load': metrics["load power"]['MAE'],
-        'R2_load': metrics["load power"]['R2']
+        'MAE_load': metrics["load power"]['MAE']
+
     })
 
 

@@ -140,7 +140,7 @@ for i, train_size in enumerate(cases):
         sigma = abs(real_sigma_last - generated_sigma_last) / real_sigma_last
     
         # Store results in dictionary
-        metrics[param] = {'RMSE': RMSE, 'MAE': MAE, 'R2': R2, 'Sigma': sigma}
+        metrics[param] = {'RMSE': RMSE, 'MAE': MAE}
     
         # Plot predictions
         plt.figure(figsize=(12, 8))
@@ -157,16 +157,12 @@ for i, train_size in enumerate(cases):
         'train_size': train_size,
         'RMSE_wind': metrics["wind power"]['RMSE'],
         'MAE_wind': metrics["wind power"]['MAE'],
-        'R2_wind': metrics["wind power"]['R2'],
-        'Sigma_wind': metrics["wind power"]['Sigma'],
+
         'RMSE_solar': metrics["solar power"]['RMSE'],
         'MAE_solar': metrics["solar power"]['MAE'],
-        'R2_solar': metrics["solar power"]['R2'],
-        'Sigma_solar': metrics["solar power"]['Sigma'],
+
         'RMSE_load': metrics["load power"]['RMSE'],
-        'MAE_load': metrics["load power"]['MAE'],
-        'R2_load': metrics["load power"]['R2'],
-        'Sigma_load': metrics["load power"]['Sigma']
+        'MAE_load': metrics["load power"]['MAE']
     })
 
 # Convert results to DataFrame and save to CSV

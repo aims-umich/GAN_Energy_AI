@@ -34,13 +34,13 @@ configs = list(product(learning_rate, num_layers, num_nodes, batch_size))
 MS_list = []
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/FFchf/fixed4/len/xLen.csv").values
+train_data = pd.read_csv("xLen.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 x_train = train_data[:, :-2]  # All columns except last 2 as input
 y_train = train_data[:, -2:]  # Last 2 columns as output
 
-test_data = pd.read_csv("/home/unabila/CondGan/fixed4/test_len.csv").values
+test_data = pd.read_csv("../test_len.csv").values
 Y_test = test_data[:, -2:]  # Last 2 columns as output
 test_data = scaler.transform(test_data)
 x_test = test_data[:, :-2]
