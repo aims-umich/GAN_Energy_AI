@@ -23,6 +23,8 @@ pip install torch torchvision torchaudio
 
 # 4. Install other relevant packages
 pip install pandas matplotlib scikit-learn seaborn
+pip install optuna
+
 ```
 
 🟠 TensorFlow Environment (only for cGAN CHF model)
