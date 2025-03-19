@@ -1,0 +1,44 @@
+R-squared (R): 0.9085
+Trial 0: MAPE = 0.1968
+R-squared (R): -0.0990
+Trial 1: MAPE = 0.7504
+R-squared (R): 0.9154
+Trial 2: MAPE = 0.1566
+R-squared (R): 0.9600
+Trial 3: MAPE = 0.1074
+R-squared (R): 0.8913
+Trial 4: MAPE = 0.2154
+R-squared (R): -1.0602
+Trial 5: MAPE = 0.7023
+R-squared (R): -0.3883
+Trial 6: MAPE = 0.5858
+R-squared (R): 0.9200
+Trial 7: MAPE = 0.1695
+R-squared (R): 0.9762
+Trial 8: MAPE = 0.1276
+R-squared (R): 0.9369
+Trial 9: MAPE = 0.1275
+R-squared (R): 0.8855
+Trial 10: MAPE = 0.1968
+R-squared (R): 0.9519
+Trial 11: MAPE = 0.1249
+R-squared (R): 0.8572
+Trial 12: MAPE = 0.2190
+R-squared (R): 0.8426
+Trial 13: MAPE = 0.2281
+R-squared (R): 0.9601
+Trial 14: MAPE = 0.1092
+R-squared (R): 0.9641
+Trial 15: MAPE = 0.0844
+R-squared (R): 0.9623
+Trial 16: MAPE = 0.0952
+R-squared (R): 0.9039
+Trial 17: MAPE = 0.1520
+R-squared (R): -1.1979
+Trial 18: MAPE = 0.1494
+R-squared (R): 0.9415
+Trial 19: MAPE = 0.1386
+Best trial number: 15
+Best hyperparameters: {'latent_dim': 36, 'lr_gan': 0.0002952864657050461, 'num_epochs_gan': 5885, 'num_layers': 2, 'num_nodes': 85, 'batch_size': 178}
+Best 10k MAPE: 0.0844
+Total time elapsed: 684.94 minutes

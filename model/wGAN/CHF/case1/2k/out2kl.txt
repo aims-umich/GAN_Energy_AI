@@ -1,0 +1,54 @@
+Trial 0: MAPE = 0.7312, R2 = 0.1159, KL Divergence = 0.3132
+Trial 1: MAPE = 0.4369, R2 = 0.6647, KL Divergence = 0.1428
+Trial 2: MAPE = 0.7853, R2 = 0.1875, KL Divergence = 0.8385
+Trial 3: MAPE = 0.6507, R2 = 0.5050, KL Divergence = 0.2165
+Trial 4: MAPE = 3.1261, R2 = -2.7716, KL Divergence = 4.9970
+Trial 5: MAPE = 1.5413, R2 = -0.2342, KL Divergence = 2.0537
+Trial 6: MAPE = 1.7535, R2 = -1.3424, KL Divergence = 0.3260
+Trial 7: MAPE = 0.9098, R2 = -0.5917, KL Divergence = 0.4672
+Trial 8: MAPE = 229.3971, R2 = -25476.6639, KL Divergence = nan
+Trial 9: MAPE = 0.5824, R2 = 0.5303, KL Divergence = 0.2147
+Trial 10: MAPE = 3.2341, R2 = -3.0395, KL Divergence = 4.9970
+Trial 11: MAPE = 0.5400, R2 = 0.3826, KL Divergence = 0.2173
+Trial 12: MAPE = 0.3575, R2 = 0.8046, KL Divergence = 0.1194
+Trial 13: MAPE = 0.3188, R2 = 0.8661, KL Divergence = 0.0603
+Trial 14: MAPE = 2.3109, R2 = -1.1319, KL Divergence = 3.9334
+Trial 15: MAPE = 0.5396, R2 = 0.5725, KL Divergence = 0.2733
+Trial 16: MAPE = 0.5371, R2 = 0.5490, KL Divergence = 0.1977
+Trial 17: MAPE = 1.0182, R2 = -0.2187, KL Divergence = 0.5796
+Trial 18: MAPE = 0.5697, R2 = 0.6066, KL Divergence = 0.1354
+Trial 19: MAPE = 0.2366, R2 = 0.9107, KL Divergence = 0.0435
+Trial 20: MAPE = 0.7552, R2 = 0.0200, KL Divergence = 0.2744
+Trial 21: MAPE = 1.0305, R2 = -0.2666, KL Divergence = 0.4724
+Trial 22: MAPE = 0.7948, R2 = 0.4654, KL Divergence = 0.3099
+Trial 23: MAPE = 0.8472, R2 = 0.4213, KL Divergence = 0.3254
+Trial 24: MAPE = 1.0108, R2 = 0.0435, KL Divergence = 0.5605
+Trial 25: MAPE = 29.0368, R2 = -450.6166, KL Divergence = nan
+Trial 26: MAPE = 1.2428, R2 = -0.3214, KL Divergence = 0.5849
+Trial 27: MAPE = 0.8532, R2 = 0.0394, KL Divergence = 0.3989
+Trial 28: MAPE = 0.3067, R2 = 0.7718, KL Divergence = 0.1042
+Trial 29: MAPE = 1.1826, R2 = -0.0227, KL Divergence = 2.7418
+Trial 30: MAPE = 0.8720, R2 = -0.1294, KL Divergence = 0.2991
+Trial 31: MAPE = 1.6244, R2 = -0.2821, KL Divergence = 3.2644
+Trial 32: MAPE = 1.1665, R2 = -0.2038, KL Divergence = 0.5999
+Trial 33: MAPE = 0.8562, R2 = -0.1907, KL Divergence = 0.4575
+Trial 34: MAPE = 0.8514, R2 = 0.4024, KL Divergence = 0.3353
+Trial 35: MAPE = 0.3079, R2 = 0.7059, KL Divergence = 0.1150
+Trial 36: MAPE = 0.5433, R2 = 0.6412, KL Divergence = 0.1477
+Trial 37: MAPE = 0.7336, R2 = 0.4341, KL Divergence = 0.3761
+Trial 38: MAPE = 1.0456, R2 = -1.0121, KL Divergence = 0.5046
+Trial 39: MAPE = 0.5192, R2 = 0.5964, KL Divergence = 0.1829
+Trial 40: MAPE = 0.3811, R2 = 0.6513, KL Divergence = 0.1280
+Trial 41: MAPE = 0.6413, R2 = 0.3257, KL Divergence = 0.2762
+Trial 42: MAPE = 0.5603, R2 = 0.4842, KL Divergence = 0.2641
+Trial 43: MAPE = 0.3231, R2 = 0.7908, KL Divergence = 0.0904
+Trial 44: MAPE = 0.4615, R2 = 0.4124, KL Divergence = 0.1740
+Trial 45: MAPE = 0.2835, R2 = 0.8259, KL Divergence = 0.0759
+Trial 46: MAPE = 0.7178, R2 = 0.5273, KL Divergence = 0.2812
+Trial 47: MAPE = 0.3482, R2 = 0.7358, KL Divergence = 0.1181
+Trial 48: MAPE = 0.5420, R2 = 0.5984, KL Divergence = 0.1595
+Trial 49: MAPE = 203.2937, R2 = -19735.2700, KL Divergence = nan
+Best trial number: 19
+Best hyperparameters: {'latent_dim': 63, 'lr_gan': 0.0005937169381033476, 'num_epochs_gan': 3009, 'num_layers': 3, 'num_nodes': 25, 'batch_size': 31}
+Best 2h MAPE: 0.2366
+Total time elapsed: 171.13 minutes
