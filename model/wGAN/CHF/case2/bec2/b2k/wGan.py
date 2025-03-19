@@ -17,8 +17,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/WganCHF/sml2/Smolin.csv").values
-test_data = pd.read_csv("/home/unabila/WganCHF/sml2/Becker.csv").values
+train_data = pd.read_csv("../Becker.csv").values
+test_data = pd.read_csv("../Kirillov.csv").values
 
 # Split features and target
 train_x, train_y = train_data[:, :-1], train_data[:, -1]
@@ -65,7 +65,7 @@ def objective(trial):
     num_epochs_gan = trial.suggest_int('num_epochs_gan', 500, 5000)
     
     # New search space for number of layers and nodes in Generator
-    num_layers = trial.suggest_int('num_layers', 2, 5)  # Between 2 and 5 layers
+    num_layers = trial.suggest_int('num_layers', 2, 6)  # Between 2 and 5 layers
     num_nodes = trial.suggest_int('num_nodes', 64, 256)  # Number of nodes per layer
 
     # VAE Model
@@ -117,28 +117,24 @@ def objective(trial):
             return self.model(x)
 
     # Discriminator for WGAN
-    # Discriminator for WGAN with dynamic number of layers and nodes
     class Discriminator(nn.Module):
-        def __init__(self, input_size, num_layers, num_nodes):
+        def __init__(self, input_size):
             super(Discriminator, self).__init__()
-            layers = [nn.Linear(input_size + 1, num_nodes), nn.ReLU()]  # First layer with input and CHF output concatenation
-    
-            for _ in range(num_layers - 1):  # Add hidden layers dynamically
-                layers.extend([nn.Linear(num_nodes, num_nodes), nn.ReLU()])
-    
-            layers.append(nn.Linear(num_nodes, 1))  # Output a single value (Wasserstein distance)
-            self.model = nn.Sequential(*layers)
-    
+            self.fc1 = nn.Linear(input_size + 1, 128)  # 1 is the output CHF
+            self.fc2 = nn.Linear(128, 64)
+            self.fc3 = nn.Linear(64, 1)  # Output a single value (Wasserstein distance)
+
         def forward(self, x, y):
             x = torch.cat([x, y], dim=1)  # Concatenate input and output (CHF)
-            return self.model(x)  # Linear output for Wasserstein distance
-
+            x = F.relu(self.fc1(x))
+            x = F.relu(self.fc2(x))
+            return self.fc3(x)  # Linear output for Wasserstein distance
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     vae_model = VAE([train_x.shape[1], 400, 400, 400, latent_dim], latent_dim).to(device)
     modelG = Generator(train_x.shape[1] + latent_dim, latent_dim, num_layers, num_nodes).to(device)
-    modelD = Discriminator(train_x.shape[1] + latent_dim, num_layers, num_nodes).to(device)
+    modelD = Discriminator(train_x.shape[1] + latent_dim).to(device)
 
     optimizerG = torch.optim.Adam(modelG.parameters(), lr=lr_gan)
     optimizerD = torch.optim.Adam(modelD.parameters(), lr=lr_gan)
@@ -227,10 +223,15 @@ study.optimize(objective, n_trials=50)
 best_trial = study.best_trial
 print(f'Best trial number: {best_trial.number}')
 print(f'Best hyperparameters: {best_trial.params}')
-print(f'Best s2b MAPE: {best_trial.value}')
+print(f'Best b2k MAPE: {best_trial.value}')
 
 # Print the elapsed time
 end_time = time.time()
 print(f"Total time elapsed: {(end_time - start_time) / 60:.2f} minutes")
 
 
+#Best trial number: 37
+#Best hyperparameters: {'latent_dim': 10, 'lr_vae': 1.068693713689003e-05, 'lr_gan': 0.00025063590003204865, 'num_
+#epochs_vae': 658, 'num_epochs_gan': 3738, 'num_layers': 3, 'num_nodes': 83}
+#Best MAPE: 11.479561713521985
+#R2 = 0.94

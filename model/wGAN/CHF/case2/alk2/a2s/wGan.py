@@ -17,8 +17,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/WganCHF/zen2/Zenkevich.csv").values
-test_data = pd.read_csv("/home/unabila/CondGan/zen2/Alekseev.csv").values
+train_data = pd.read_csv("../Alekseev.csv").values
+test_data = pd.read_csv("../Smolin.csv").values
 
 # Split features and target
 train_x, train_y = train_data[:, :-1], train_data[:, -1]
@@ -65,7 +65,7 @@ def objective(trial):
     num_epochs_gan = trial.suggest_int('num_epochs_gan', 500, 5000)
     
     # New search space for number of layers and nodes in Generator
-    num_layers = trial.suggest_int('num_layers', 2, 6)  # Between 2 and 5 layers
+    num_layers = trial.suggest_int('num_layers', 2, 5)  # Between 2 and 5 layers
     num_nodes = trial.suggest_int('num_nodes', 64, 256)  # Number of nodes per layer
 
     # VAE Model
@@ -223,15 +223,10 @@ study.optimize(objective, n_trials=50)
 best_trial = study.best_trial
 print(f'Best trial number: {best_trial.number}')
 print(f'Best hyperparameters: {best_trial.params}')
-print(f'Best z2a MAPE: {best_trial.value}')
+print(f'Best a2s MAPE: {best_trial.value}')
 
 # Print the elapsed time
 end_time = time.time()
 print(f"Total time elapsed: {(end_time - start_time) / 60:.2f} minutes")
 
 
-#Best trial number: 37
-#Best hyperparameters: {'latent_dim': 10, 'lr_vae': 1.068693713689003e-05, 'lr_gan': 0.00025063590003204865, 'num_
-#epochs_vae': 658, 'num_epochs_gan': 3738, 'num_layers': 3, 'num_nodes': 83}
-#Best MAPE: 11.479561713521985
-#R2 = 0.94

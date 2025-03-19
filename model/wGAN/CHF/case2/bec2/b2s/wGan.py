@@ -17,8 +17,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/WganCHF/bec2/Becker.csv").values
-test_data = pd.read_csv("/home/unabila/WganCHF/bec2/Alekseev.csv").values
+train_data = pd.read_csv("../Becker.csv").values
+test_data = pd.read_csv("../Smolin.csv").values
 
 # Split features and target
 train_x, train_y = train_data[:, :-1], train_data[:, -1]
@@ -223,7 +223,7 @@ study.optimize(objective, n_trials=50)
 best_trial = study.best_trial
 print(f'Best trial number: {best_trial.number}')
 print(f'Best hyperparameters: {best_trial.params}')
-print(f'Best b2a MAPE: {best_trial.value}')
+print(f'Best b2s MAPE: {best_trial.value}')
 
 # Print the elapsed time
 end_time = time.time()
