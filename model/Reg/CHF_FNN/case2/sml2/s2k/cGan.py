@@ -58,13 +58,13 @@ MS_list = []
 
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/FFchf/sml2/Smolin.csv").values
+train_data = pd.read_csv("../Smolin.csv").values
 scaler = MinMaxScaler()
 train_data = scaler.fit_transform(train_data)
 x_train = train_data[:, :-1]
 y_train = train_data[:, -1]
 
-test_data = pd.read_csv("/home/unabila/FFchf/sml2/Kirillov.csv").values
+test_data = pd.read_csv("../Kirillov.csv").values
 Y_test = test_data[:, -1]
 test_data = scaler.transform(test_data)
 x_test = test_data[:, :-1]

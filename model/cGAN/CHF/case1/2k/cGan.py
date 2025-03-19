@@ -149,7 +149,7 @@ def plot_comparison(df1,df2, num_points_from_file2,item):
     
 #######################################################################################################
 # Define configurations
-learning_rate = [5e-4,1e-3]
+learning_rate = [1e-3]
 num_layers = [3,4]
 num_nodes = [200,250,300]
 batch_size = [32,64,128]
@@ -187,7 +187,7 @@ for item in configs:
     # create the gan
     cgan = build_cgan(generator, discriminator)
     # train model(g_model, d_model, gan_model, real_input_data, latent_dim, learning_rate, num_layers, num_nodes,..)
-    epochs = 6000  # Number of epochs you want to train for
+    epochs = 4000  # Number of epochs you want to train for
     train_cgan(generator, discriminator, cgan, xtrain, ytrain, epochs, z_dim, batch_size = item[3] )
 
     # generate data
@@ -221,7 +221,7 @@ results_df = pd.DataFrame(MS_list, columns=['MAPE', 'R2'])
 final_result = pd.concat([gridres, results_df], axis=1)
 
 # Save the results to a CSV file
-final_result.to_csv('resultsLr.csv', index=False)
+final_result.to_csv('Check_resultsLr.csv', index=False)
 
 # Assign mean and sigma values to separate columns in the DataFrame
 gridres['Mape'] = mean_values

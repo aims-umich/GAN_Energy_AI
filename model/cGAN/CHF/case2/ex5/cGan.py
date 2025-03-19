@@ -49,7 +49,7 @@ def build_discriminator(x_dim,learning_rate, num_layers, num_nodes):
 
     model = Model(inputs=x, outputs=out_layer)
 
-    model.compile(loss='binary_crossentropy', optimizer=Adam(lr=learning_rate), metrics=['mean_absolute_error'])
+    model.compile(loss='binary_crossentropy', optimizer=Adam(learning_rate=learning_rate), metrics=['mean_absolute_error'])
     return model
 
 
@@ -206,8 +206,8 @@ for item in configs:
     # Save generated data to a CSV file
     columns = ['Diameter', 'length', 'Pressure', 'Mass flux', 'Temperature', 'CHF']
     generated_df = pd.DataFrame(generated_data, columns=columns)
-    generated_df.to_csv(f'generated_samples_{item}.csv', index=False)
-    plot_comparison(test_data,generated_data,2587,item) 
+    #generated_df.to_csv(f'generated_samples_{item}.csv', index=False)
+    #plot_comparison(test_data,generated_data,2587,item) 
 
 
 gridres = pd.DataFrame(configs, columns = ['learning_rate', 'num_layers', 'num_nodes','batch_size'])
@@ -221,7 +221,7 @@ results_df = pd.DataFrame(MS_list, columns=['MAPE', 'R2'])
 final_result = pd.concat([gridres, results_df], axis=1)
 
 # Save the results to a CSV file
-final_result.to_csv('results.csv', index=False)
+final_result.to_csv('Check_results.csv', index=False)
 
 # Assign mean and sigma values to separate columns in the DataFrame
 gridres['Mape'] = mean_values

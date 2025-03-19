@@ -92,7 +92,7 @@ train_loader = DataLoader(TensorDataset(torch.from_numpy(train_x).float()), batc
 vae_model = VAE([8, 400, 400, 400, 10], latent_dim=10)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-num_epochs = 2  #50
+num_epochs = 250
 learning_rate = 0.0001
 vae_model = vae_model.to(device)
 optimizer = torch.optim.Adam(vae_model.parameters(), lr=learning_rate)
@@ -137,9 +137,9 @@ train_x = np.concatenate((train_x, VAE_train_x.cpu().detach().numpy()), axis=1)
 test_x = np.concatenate((test_x, VAE_test_x.cpu().detach().numpy()), axis=1)
 
 # Loop through lookback values
-#lookback_values = [2*60 // 5, 4*60 // 5, 6*60 // 5, 8*60 // 5, 10*60 // 5, 12*60 // 5]
-lookback_values = [5]
-lookforward = 5 # 144
+lookback_values = [2*60 // 5, 4*60 // 5, 6*60 // 5, 8*60 // 5, 10*60 // 5, 12*60 // 5]
+#lookback_values = [5]
+lookforward = 144
 
 results = []
 
@@ -198,7 +198,7 @@ for lookback in lookback_values:
 
     batch_size = 128
     learning_rate = 0.0001
-    num_epochs = 2 #50
+    num_epochs = 250
 
     trainDataloader = DataLoader(TensorDataset(train_x_slide, train_y_gan), batch_size=batch_size, shuffle=False)
 
@@ -295,7 +295,7 @@ for lookback in lookback_values:
 
 # Convert results to DataFrame and save to CSV
 results_df = pd.DataFrame(results)
-results_df.to_csv('chck_gan12h_lookback_results.csv', index=False)
+results_df.to_csv('check_gan12h_lookback_results.csv', index=False)
 
 # Print the elapsed time
 end_time = time.time()
