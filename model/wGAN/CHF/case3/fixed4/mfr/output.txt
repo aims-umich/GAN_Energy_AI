@@ -32,3 +32,7 @@ R-squared (R): 0.4456
 Trial 15: MAPE = 48.6526
 R-squared (R): -0.0635
 Trial 16: MAPE = 79.7256
+
+Best:
+R-squared (R): 0.8732
+Trial 14: MAPE = 17.5781

@@ -17,8 +17,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # Load and preprocess data
-train_data = pd.read_csv("/home/unabila/WganCHF/fixed4/temp/xTemp.csv").values
-test_data = pd.read_csv("/home/unabila/WganCHF/fixed4/test_all.csv").values
+train_data = pd.read_csv("xTemp.csv").values
+test_data = pd.read_csv("test_all.csv").values
 
 # Split features and target
 train_x, train_y = train_data[:, :-1], train_data[:, -1]

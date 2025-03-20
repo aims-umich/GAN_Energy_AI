@@ -1,0 +1,2 @@
+Best MAPE: 17.29	
+Best R2: 0.91
