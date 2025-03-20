@@ -8,7 +8,7 @@ Nabila, U.M., Lin, L., Zhao, X., Gurecky, W.L., Ramuhalli, P., Radaideh, M.I. (2
 
 ## ⚙️Environment Installation
 
-This project uses PyTorch for most models (WGAN, FNN, GRU, etc.) and TensorFlow for the cGAN model. Please set up the environments accordingly:
+This project uses PyTorch for most models (WGAN, FNN, GRU, etc.) and TensorFlow for the cGAN CHF model and FNN model. Please set up the environments accordingly:
 
 🔵 PyTorch Environment (for cGAN, FNN, GRU, etc.)
 ```bash
@@ -27,7 +27,7 @@ pip install optuna
 
 ```
 
-🟠 TensorFlow Environment (only for cGAN CHF model)
+🟠 TensorFlow Environment (only for cGAN CHF model and FNN model)
 ```bash
 # 1. Create a new conda environment with Python 3.11
 conda create -n tfgpu python=3.11
