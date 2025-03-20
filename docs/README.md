@@ -52,7 +52,7 @@ After downloading, place the file in the `data/` folder of this repository.
 
 ## 📊 How to generate the results
 
-- The folder `data` contains the train and test data files (with all the CHF data points) and PSML dataset.
+- The folder `data` contains the CHF test data file (with all the CHF data points) and PSML dataset.
 - Datasets for different case scenarios are organized into appropriate case-specific folders under the model directory.
 - Navigate to the desired case folder inside models and run the appropriate script to start training or evaluation (e.g., cGan_all.py for case1/all):
   
