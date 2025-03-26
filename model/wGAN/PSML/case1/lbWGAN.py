@@ -43,10 +43,7 @@ train_y, test_y = y[:two_week, :], y[two_week:two_week + ten_days, :]
 # Create a DataFrame for test_y
 test_y_df = pd.DataFrame(test_y, columns=['wind_power', 'solar_power', 'load_power'])
 
-# Save test_y to a CSV file
-test_y_df.to_csv("/home/unabila/wgan/test_y.csv", index=False)
 
-print("test_y saved to /home/unabila/wgan/test_y.csv")
 
 
 # Scale data
