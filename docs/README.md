@@ -62,3 +62,4 @@ python cGan_all.py
 ```
 
 Results will be saved automatically in the working folder.
+Note: The seasonal variation experiment (PSML case 3) is not included in a separate folder in this repository. This is because the results were briefly discussed in the paper without being presented in a dedicated table or figure.
