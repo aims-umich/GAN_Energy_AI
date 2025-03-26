@@ -281,7 +281,7 @@ for lookback in lookback_values:
 
     # Append results for the current lookback
     results.append({
-        'Lookback': lookback,
+        'Lookback': lookback //12,
         'RMSE_wind': metrics["wind power"]['RMSE'],
         'MAE_wind': metrics["wind power"]['MAE'],
 
