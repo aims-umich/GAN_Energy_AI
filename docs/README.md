@@ -3,7 +3,7 @@
 ---
 
 ## 📄 Paper
-Nabila, U.M., Lin, L., Zhao, X., Gurecky, W.L., Ramuhalli, P., Radaideh, M.I. (2025). “Data Efficiency Assessment of Generative Adversarial Networks in Energy Applications,” Preprint submitted to Energy and AI.
+Nabila, U. M., Lin, L., Zhao, X., Gurecky, W. L., Ramuhalli, P., Radaideh, M. I. (2025). Data efficiency assessment of generative adversarial networks in energy applications. *Energy and AI*, **20**, 100501. https://doi.org/10.1016/j.egyai.2025.100501
 
 
 ## ⚙️Environment Installation
